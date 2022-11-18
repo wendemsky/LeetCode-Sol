@@ -1,6 +1,8 @@
 class Solution {
 public:
     int f(int ind, vector<int> &nums, vector<int> &dp){
+        
+        //Memoization
         if(ind==0) return nums[ind];
         if(ind<0) return 0;
         if(dp[ind]!=-1) return dp[ind];
@@ -12,6 +14,7 @@ public:
     }
     
     int rob(vector<int>& nums) {
+        //Tabulation
         int n=nums.size();
         if(n==1) return nums[0];
         vector<int> dp(n, -1);
@@ -23,5 +26,7 @@ public:
             dp[i] = max(pick, notpick);
         }
         return dp[n-1];
+        
+        //For Space Optimization, Check out House Robber II
     }
 };
