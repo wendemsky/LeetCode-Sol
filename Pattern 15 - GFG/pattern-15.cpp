@@ -7,15 +7,12 @@ using namespace std;
 class Solution {
   public:
     void printTriangle(int n) {
-       char ch;
-        for(int i=0;i<n;i++){
-            ch = 'A';
-            for(int j=0;j<n-i;j++){
-                cout<<ch;
-                ch++;
+       for(int i=0;i<n;i++){
+            for(char ch = 'A'; ch<'A'+(n-i);ch++){
+               cout<<ch;
             }
             cout<<endl;
-        }
+       }
     }
 };
 
